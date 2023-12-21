@@ -1,0 +1,486 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #0a0a0a;
+}
+#logo{
+    height: 5vh;
+    width: 20vw;
+}
+.nav-img{
+    height: 3vh;
+    width: 2.5vw;
+    padding-right: 2px;
+}
+#nav-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+}
+#name-logo{
+    margin-left: 30px;
+    align-items: center;
+}
+#nav-components{
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+#search,#contatus{
+    display: flex;
+    align-items: center;
+}
+#search input{
+    border: unset;
+    width: 200px;
+}
+
+#random-main{
+    height: 40vh;
+    width: 100vw;
+    display: flex; 
+    background-image: url(./assets/back.jpg);
+    background-size: cover;
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 8vh;
+}
+#random-meal{
+    height: 35vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#description{
+    position: relative;  
+}
+
+#description h4{
+    color: rgb(110, 73, 5);
+    font-size: 80%;
+    padding: 10px;
+    font-weight: 300;
+}
+.meal-image{
+    height: 80%;
+    width: 70%;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+#random-meal .meal-name{
+    color: white;
+    font-size: 120%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#meal-categories{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.items {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+.items:hover {
+    transform: scale(1.05);
+}
+
+.heading{
+    font-family: "Sofia Pro-Bold", Helvetica;
+    font-weight: 700;
+    color: #d22c12;
+    font-size: 100%;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;   
+}
+
+.items .meal-image {
+    width: 100%;
+    height: 82%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.items .meal-name {
+    margin: 0;
+    padding: 15px;
+    background-color: #ffb74d;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Optional: Add some spacing between items */
+.items + .items {
+    margin-top: 20px;
+}
+
+.name:hover{
+    background-color: #d22c12;
+    color: white;
+}
+
+
+#searchbycat{
+    text-align: center;
+    padding: 25px;
+    font-size: 4vw;
+}
+
+#contatus span{
+    color: rgb(255, 171, 1);
+}
+
+#popup1 {
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    height: 60vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+  }
+
+#popup .text{
+    padding: 20px;
+    text-align: justify;
+    color: #0a0a0a;
+
+}
+#popup1 span{
+    color: grey;
+    text-align: center;
+    justify-self: flex-end;
+}
+
+#popup{
+    height: 90%;
+    width: 100%;
+    overflow: auto;
+}
+
+
+#close-button {
+    background-color: #ffb74d; 
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+
+  }
+  
+  #close-button:hover {
+    background-color: #d22c12;
+  }
+  
+  #button{
+    align-self: center;
+  }
+ .hover-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 100px;
+    background-color: #5d5b5b;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .hover-div:hover {
+    background-color: #ff9900;
+  }
+
+  .text {
+    font-weight: bold;
+    color: #fff;
+  }
+.menu-that-always {
+    font-family: "Sofia Pro-Bold", Helvetica;
+    font-weight: 700;
+    color: transparent;
+    font-size: 3vw;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.text-wrapper-2 {
+    color: #f54748;
+}
+
+.text-wrapper-3 {
+    color: #fdc55e;
+}
+
+.span {
+    color: white;
+}
+
+ /* code for astyle of catogorie divs */
+
+ .overlap-wrapper {
+    position: absolute;
+    width: 314px;
+    height: 516px;
+    top: 1213px;
+    left: 47px;
+}
+.overlap-5 {
+    position: relative;
+    width: 290px;
+    height: 500px;
+    padding: 40px;
+    margin: 30px;
+   
+}
+
+.rectangle {
+    position: absolute;
+    width: 290px;
+    height: 360px;
+    top: 130px;
+    left: 0;
+    border-radius: 20px;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgb(95, 7, 7));
+}
+
+.group-2 {
+    position: absolute;
+    width: 156px;
+    height: 38px;
+    top: 261px;
+    left: 77px;
+}
+
+.overlap-group-wrapper {
+    position: absolute;
+    width: 74px;
+    height: 38px;
+    top: 0;
+    left: 0;
+}
+
+.overlap-group-2 {
+    position: relative;
+    height: 38px;
+}
+
+.unsplash {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    top: 0;
+    left: 0;
+}
+
+ .unsplash-szzuuwk {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    top: 0;
+    left: 18px;
+}
+
+.unsplash-epitrqcz {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    top: 0;
+    left: 36px;
+}
+
+.group-3 {
+    position: absolute;
+    width: 74px;
+    height: 28px;
+    top: 5px;
+    left: 84px;
+}
+
+ .star {
+    position: absolute;
+    width: 22px;
+    height: 21px;
+    top: 2px;
+    left: 3px;
+}
+
+.text-wrapper-5 {
+    position: absolute;
+    top: 2px;
+    left: 34px;
+    font-family: "Sofia Pro-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.text-wrapper-6 {
+    position: absolute;
+    top: 329px;
+    left: 50px;
+    font-family: "Sofia Pro-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #faf7f7;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    /* border: 1px solid white; */
+    width: 200px;
+
+}
+
+.lorem-ipsum-is {
+    position: absolute;
+    width: 243px;
+    top: 378px;
+    left: 34px;
+    opacity: 0.8;
+    font-family: "Sofia Pro-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+ .div-wrapper {
+    position: absolute;
+    width: 133px;
+    height: 45px;
+    top: 471px;
+    left: 90px;
+}
+
+ .overlap-6 {
+    position: relative;
+    width: 131px;
+    height: 45px;
+    background-color: #f65f5f;
+    border-radius: 100px;
+    border: 3px solid ;
+}
+
+.text-wrapper-7 {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    font-family: "Sofia Pro-Regular", Helvetica;
+    font-weight: 400;
+    color: #0c0c0c;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.group-4 {
+    position: absolute;
+    width: 254px;
+    height: 254px;
+    top: 0;
+    left: 28px;
+}
+
+.overlap-7 {
+    position: relative;
+    width: 248px;
+    height: 248px;
+    top: 3px;
+    left: 3px;
+}
+
+.group-5 {
+    position: absolute;
+    width: 198px;
+    height: 207px;
+    top: 26px;
+    left: 25px;
+}
+
+ .overlap-8 {
+    position: relative;
+    height: 207px;
+}
+
+.unsplash-uchzduitwy {
+    position: absolute;
+    width: 198px;
+    height: 198px;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+
+.youtube{
+    top: 10px;
+    left: 10px;
+}
+
+
+@media only screen and (max-width: 330px) {
+    #description{
+        margin-top: 2.5vh;
+    }
+    #random-meal{
+        flex-direction: row;
+        align-items: center;
+        
+    }
+    #random-meal img{
+        height: 80px;
+        width: 80px;
+    }
+    #random-meal h2{
+        font-size: 2px;
+    }
+    .overlap-5{
+        width: 100vw;
+        left: 0;
+        margin: 0px;
+        margin-top: 30px;
+    }
+    .rectangle{
+        width: 100vw;
+        left: 0;
+    }
+  }
