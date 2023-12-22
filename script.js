@@ -46,30 +46,30 @@ function fetchMealsByCategory(category) {
         .then(data => {
             if (data.meals) {
                 const mealsHTML = data.meals.map(meal => `
-                <div class="overlap-5">
+                <div class="cato-div-meal">
                 <div class="rectangle"></div>
                 <div class="group-2">
-                    <div class="overlap-group-wrapper">
-                        <div class="overlap-group-2">
-                            <img class="unsplash" src="./assets/unsplash_EPi3TRQc5Z0 copy.svg" />
-                            <img class="unsplash-szzuuwk" src="./assets/unsplash_m663zRzRe40 copy.svg" />
-                            <img class="unsplash-epitrqcz" src="./assets/unsplash_7Sz71zuuW4k.svg" />
+                    <div class="div-cato-meal">
+                        <div class="image-review ">
+                            <img class="review-img-1" src="./assets/unsplash_EPi3TRQc5Z0 copy.svg" />
+                            <img class="review-img-2" src="./assets/unsplash_m663zRzRe40 copy.svg" />
+                            <img class="review-img-3" src="./assets/unsplash_7Sz71zuuW4k.svg" />
                         </div>
                     </div>
                     <div class="group-3">
                         <img class="star" src="./assets/Star 7.svg" />
-                        <div class="text-wrapper-5">(4.5)</div>
+                        <div class="review-text">(${random_wholenum()}.${random_decimalnum()})</div>
                     </div>
                 </div>
-                <div class="text-wrapper-6">${meal.strMeal}</div>
-                <div class="div-wrapper">
-                    <div onclick="searchYouTubeVideos('${meal.strMeal}')" class="overlap-6" > <img class="star youtube" src="./assets/Group 5.png" /><div class="text-wrapper-7">Recipe</div></div>
+                <div class="text-meal-name">${meal.strMeal}</div>
+                <div class="div-recipe">
+                    <div onclick="searchYouTubeVideos('${meal.strMeal}')" class="youtube-div" > <img class="star youtube" src="./assets/Group 5.png" /><div class="text-recipe">Recipe</div></div>
                 </div>
                 <div class="group-4">
                     <div class="overlap-7">
                         <div class="group-5">
                             <div class="overlap-8">
-                                <img class="unsplash-uchzduitwy" src="${meal.strMealThumb}" />
+                                <img class="meal-thumb-img" src="${meal.strMealThumb}" />
                             </div>
                         </div>
                         <img class="ellipse-2" src="./assets/Ellipse 57.svg" />
@@ -94,12 +94,22 @@ function searchYouTubeVideos(dishName) {
             window.open(youtubeLink,'_blank')
         })
 }
+
+function random_wholenum(){
+    return Math.floor(Math.random() * 5)+1;
+}
+function random_decimalnum(){
+    return Math.floor(Math.random() * 10);
+}
 search_bar.addEventListener('input', event => {
     fetchMealsByCategory(event.target.value);
+    window.scrollTo({
+        top: 260,
+        behavior: "smooth"
+    })
 });
 search_bar.addEventListener('search', event => {
     const searchTerm = event.target.value.trim();
-
     if (searchTerm === '') {
         meal_cat.innerHTML = `<div class='items'>
         <img class='meal-image' src="./assets/img/pexels-engin-akyurt-2994900.jpg">

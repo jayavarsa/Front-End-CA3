@@ -2,6 +2,9 @@
 const navbarMenu = document.getElementById("menu");
 const burgerMenu = document.getElementById("burger");
 const bgOverlay = document.querySelector(".overlay");
+const searchBlock = document.querySelector(".search-block");
+const searchToggle = document.querySelector(".search-toggle");
+const searchCancel = document.querySelector(".search-cancel");
 
 if (burgerMenu && bgOverlay) {
    burgerMenu.addEventListener("click", () => {
@@ -15,18 +18,12 @@ if (burgerMenu && bgOverlay) {
    });
 }
 
-
 document.querySelectorAll(".menu-link").forEach((link) => {
    link.addEventListener("click", () => {
       navbarMenu.classList.remove("is-active");
       bgOverlay.classList.remove("is-active");
    });
 });
-
-
-const searchBlock = document.querySelector(".search-block");
-const searchToggle = document.querySelector(".search-toggle");
-const searchCancel = document.querySelector(".search-cancel");
 
 if (searchToggle && searchCancel) {
    searchToggle.addEventListener("click", () => {
@@ -36,4 +33,10 @@ if (searchToggle && searchCancel) {
    searchCancel.addEventListener("click", () => {
       searchBlock.classList.remove("is-active");
    });
+}
+function scroll_to_top(){
+   window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+  })
 }
