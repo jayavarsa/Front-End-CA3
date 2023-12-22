@@ -3,6 +3,9 @@
 
 Welcome to Bold Food, a web application that helps you discover new and exciting meals! This application utilizes the MealDB API to generate random meals and allows users to search for specific meal categories. In addition, you can click on a meal container to view its ingredients.
 
+## Preview
+url(Boldfood%20preview.png)
+
 ## Table of Contents
 - [Getting Started](#getting-started)
 -   [Installation](#installation)
